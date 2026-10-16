@@ -3,13 +3,14 @@
 import { useEffect, useLayoutEffect, useRef, useState, useSyncExternalStore, type CSSProperties, type KeyboardEvent } from "react";
 import { InfoIcon, PaletteIcon } from "@phosphor-icons/react";
 
+// `dot` is each colour's bright (dark-theme) shade from globals.css, used for the favicon dot on its black tile.
 export const ACCENTS = [
-  { id: "mono", name: "Monochrome" },
-  { id: "orange", name: "Signal orange" },
-  { id: "lime", name: "Electric lime" },
-  { id: "teal", name: "Teal" },
-  { id: "blue", name: "Electric blue" },
-  { id: "orchid", name: "Orchid" },
+  { id: "mono", name: "Monochrome", dot: "#ededed" },
+  { id: "orange", name: "Signal orange", dot: "#ff5b1f" },
+  { id: "lime", name: "Electric lime", dot: "#c8f031" },
+  { id: "teal", name: "Teal", dot: "#2dd4bf" },
+  { id: "blue", name: "Electric blue", dot: "#5b9bff" },
+  { id: "orchid", name: "Orchid", dot: "#e879f9" },
 ] as const;
 
 type AccentId = (typeof ACCENTS)[number]["id"];

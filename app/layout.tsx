@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { SITE_TITLE } from "./data";
 import Cursor from "./components/cursor";
 import AccentPanel from "./components/accent-panel";
+import LiveFavicon from "./components/live-favicon";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div className="grain" aria-hidden="true" />
         {children}
         <AccentPanel />
+        <LiveFavicon />
         <Cursor />
       </body>
     </html>

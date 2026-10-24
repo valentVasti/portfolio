@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { SITE_TITLE } from "./data";
 import Cursor from "./components/cursor";
 import AccentPanel from "./components/accent-panel";
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <AccentPanel />
         <LiveFavicon />
         <Cursor />
+        <Analytics />
       </body>
     </html>
   );
